@@ -2,7 +2,7 @@
 Radio Spectroscopical analysis of Carbon Stars CIT6 and IRC 
 
 # Table of Contents
-- Installation
+- [Installation](#installation)
 - Usage
 - Data Processing
 - Peak Detection and Classification
@@ -18,7 +18,7 @@ Radio Spectroscopical analysis of Carbon Stars CIT6 and IRC
 - 
 
 
-## Essential packages 
+## Installation 
 
 ```python 
 import numpy as np
