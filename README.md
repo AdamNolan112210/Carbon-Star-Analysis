@@ -4,12 +4,12 @@ Radio Spectroscopical analysis of Carbon Stars CIT6 and IRC
 # Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Data Processing](#Data Processing)
-- Peak Detection and Classification
-- Smoothing and Gaussian Fitting
-- Visualization
-- Contribution
-- liense 
+- [Data Processing](#data-processing)
+- [Peak Detection and Classification](#peak-detection-and-classification)
+- [Smoothing and Gaussian Fitting](#smoothing-and-gaussian-fitting)
+- [Visualization](#visualization)
+- [Contributing](#contributing)
+- [License](#license)
 
 
 
