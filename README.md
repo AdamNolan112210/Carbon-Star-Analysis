@@ -2,6 +2,7 @@
 Radio Spectroscopical analysis of Carbon Stars [CIT6](https://en.wikipedia.org/wiki/CIT_6) and [CW Leonis](https://en.wikipedia.org/wiki/CW_Leonis) 
 
 ## Table of Contents
+- [Features](#Features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Data Processing](#data-processing)
@@ -10,8 +11,6 @@ Radio Spectroscopical analysis of Carbon Stars [CIT6](https://en.wikipedia.org/w
 - [Visualization](#visualization)
 - [Contributing](#contributing)
 - [License](#license)
-
-
 
 
 ## Features
