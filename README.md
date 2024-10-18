@@ -72,6 +72,11 @@ Smoothing is applied to the Tant data using a Savitzky-Golay filter:
 ```python
 cit_spec['Tant_smoothed'] = savgol_filter(cit_spec['Tant'], window_length=11, polyorder=2)
 ```
+Both original and smoothed data are plotted, allowing comparison:
+```python
+plt.plot(cit_spec['freq'], cit_spec['Tant'], label="CIT Original Data", color='blue')
+plt.plot(cit_spec['freq'], cit_spec['Tant_smoothed'], label="CIT Smoothed Data", color='green')
+```
 ![Smoothed Data](images/SmoothedCIT6.png)
 
 The smoothed data is then used for peak detection and Gaussian fitting:
@@ -106,23 +111,6 @@ Results are stored in a DataFrame for both CIT6 and CW Leonis
 df_classified_peaks = process_files_to_dataframe('data/Apr3/CIT6Apr3/', height=0.05, distance=5, prominence=0.05)
 ```
 <img src="images/DF.png" alt="description" width="400"/>
-
-
-## Visualization
-
-The project also includes multiple visualization tools for plotting annotated spectra for both CIT6 and CW Leonis. The plots include labeled peaks and molecular transitions, with different color coding for distinct data sections.
-
-Example of plotting annotated peaks:
-```python
-plt.scatter(peak_freqs_cit, peak_tants_cit, color='red', marker='o', label='Detected Peaks')
-plt.text(freq + 0.01, label_y_position, molecule, rotation=45, fontsize=14, color='blue')
-```
-
-Both original and smoothed data are plotted, allowing comparison:
-```python
-plt.plot(cit_spec['freq'], cit_spec['Tant'], label="CIT Original Data", color='blue')
-plt.plot(cit_spec['freq'], cit_spec['Tant_smoothed'], label="CIT Smoothed Data", color='green')
-```
 
 ## Contributing
 
