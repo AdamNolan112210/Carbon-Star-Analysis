@@ -19,7 +19,8 @@ This project offers a wide array of tools for visualizing and analysis spectrosc
 - Smoothing Spectral Data: Applies a Savitzky-Golay filter to smooth the Tant data for both CIT6 and IRC+10216, helping to reduce noise and improve clarity in peak detection.
 - Gaussian Fitting: Fits a Gaussian model to zoomed-in sections of CIT6 spectral data, allowing precise modeling of spectral lines and better visualization of the line profiles.
 - Dual-Dataset Comparison: Provides tools to compare and visualize spectral data from both CIT6 and IRC+10216, plotting the data side by side for easy comparison.
-- Annotation and Visualization: Annotates detected peaks with molecular names in the plots, making it easy to identify the molecules responsible for each spectral line. Both the original and smoothed data can be plotted for CIT6 and IRC+10216.Data Handling and Export: Processes multiple spectroscopic data files and outputs the results in easy-to-read pandas DataFrames, including peak frequencies, associated molecules, and integrated intensities (Tint).
+- Annotation and Visualization: Annotates detected peaks with molecular names in the plots, making it easy to identify the molecules responsible for each spectral line. Both the original and smoothed data can be plotted for CIT6 and IRC+10216.
+- Data Handling and Export: Processes multiple spectroscopic data files and outputs the results in easy-to-read pandas DataFrames, including peak frequencies, associated molecules, and integrated intensities (Tint).
 
 
 ### Installation 
