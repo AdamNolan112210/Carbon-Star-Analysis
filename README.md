@@ -32,6 +32,12 @@ This project offers a range of tools for analyzing and visualizing radio spectro
 
 ### Installation 
 
+To use the code within this repository you will need to install the following libraries:
+
+```python
+pip install numpy pandas matplotlib astropy scipy specutils
+```
+
 ```python 
 import numpy as np
 import pandas as pd
