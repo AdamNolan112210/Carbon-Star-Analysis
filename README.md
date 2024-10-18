@@ -48,14 +48,21 @@ drive.mount('/content/drive/')
 
 ## Usage
 
-### Loading and Processing visual data
-
 Load and process spectral line data for both CIT6 and CW Leonis:
 ```python
 molecule_data = pd.read_excel('detectedline_table.xlsx', sheet_name='CIT6')
 molecule_data['Rest Frequency'] = molecule_data['Rest Frequency'].astype(float) / 1000.  # Convert MHz to GHz
 ```
 
+The spectral data from files is loaded using pandas.read_csv and concatenated for further analysis:
+```python
+pathlist = sorted(Path('data/Apr3/CIT6Apr3/').glob('*.txt'))
+cit_spec = pd.DataFrame()
+for path in pathlist:
+    ind_spec = pd.read_csv(path, sep='\s+', names=['order', 'freq', 'Tant'])
+    cit_spec = pd.concat([cit_spec, ind_spec])
+cit_spec = cit_spec.sort_values(by='freq')
+```
 
 
 ## Data Processing
