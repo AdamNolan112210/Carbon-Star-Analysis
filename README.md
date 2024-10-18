@@ -69,8 +69,31 @@ cit_spec = cit_spec.sort_values(by='freq')
 
 ## Peak Detection and Classification
 
+The code detects peaks in intensity data and classifies them by matching detected peaks to known molecular rest frequencies:
+```python
+peaks, _ = find_peaks(ind_spec['Tant'], height=0.05, distance=5, prominence=0.05)
+peak_freqs = ind_spec['freq'].iloc[peaks].values
+```
+Molecular classification is performed by finding the closest rest frequency in the dataset
+```python
+molecule_row = molecule_data.iloc[(molecule_data['Rest Frequency'] - peak_freq).abs().argmin()]
+molecule_name = molecule_row['Molecule']
+```
+Results are stored in a DataFrame for both CIT6 and CW Leonis
+```python
+df_classified_peaks = process_files_to_dataframe('data/Apr3/CIT6Apr3/', height=0.05, distance=5, prominence=0.05)
+```
 ## Smoothing and Gaussian Fitting
 
+Smoothing is applied to the Tant data using a Savitzky-Golay filter:
+```python
+cit_spec['Tant_smoothed'] = savgol_filter(cit_spec['Tant'], window_length=11, polyorder=2)
+```
+
+The smoothed data is then used for peak detection and Gaussian fitting:
+```python
+fitted_cit_gaussian = fit_gaussian_for_section(np.array(freq_list), np.array(Tant_cit_list))
+```
 ## Visualization
 
 ## Contributing
