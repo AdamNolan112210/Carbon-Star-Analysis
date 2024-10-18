@@ -19,7 +19,7 @@ This project offers a range of tools for analyzing and visualizing radio spectro
 
 - **Peak Detection and Classification**: Automatically detects peaks in the spectroscopic data and classifies them by matching the detected peaks with known molecular transitions.
 
-- **Smoothing Spectral Data**: Applies a Savitzky-Golay filter to smooth the Tant data for both CIT6 and IRC+10216, helping to reduce noise and improve clarity in peak detection.
+- **Smoothing Spectral Data**: Applies a Savitzky-Golay filter to smooth the Tant (antenna temperature measured in K) data for both CIT6 and CW Leonis, helping to reduce noise and improve clarity in peak detection.
 
 - **Gaussian Fitting**: Fits a Gaussian model to zoomed-in sections of CIT6 spectral data, allowing precise modeling of spectral lines and better visualization of the line profiles.
 
