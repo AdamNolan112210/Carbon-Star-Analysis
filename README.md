@@ -3,7 +3,7 @@ Radio Spectroscopical analysis of Carbon Stars CIT6 and IRC
 
 # Important packages 
 
-'''python 
+''' python 
 
 import numpy as np
 import pandas as pd
