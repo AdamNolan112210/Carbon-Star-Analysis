@@ -48,7 +48,7 @@ drive.mount('/content/drive/')
 
 ## Usage
 
-Load and process spectral line data for both CIT6 and CW Leonis:
+Load the spectral line data for both CIT6 and CW Leonis:
 ```python
 molecule_data = pd.read_excel('detectedline_table.xlsx', sheet_name='CIT6')
 molecule_data['Rest Frequency'] = molecule_data['Rest Frequency'].astype(float) / 1000.  # Convert MHz to GHz
