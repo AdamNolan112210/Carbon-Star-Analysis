@@ -54,7 +54,9 @@ molecule_data = pd.read_excel('detectedline_table.xlsx', sheet_name='CIT6')
 molecule_data['Rest Frequency'] = molecule_data['Rest Frequency'].astype(float) / 1000.  # Convert MHz to GHz
 ```
 
-The spectral data from files is loaded using pandas.read_csv and concatenated for further analysis:
+## Data Processing
+
+The spectral data is loaded using pandas.read_csv and concatenated for further analysis:
 ```python
 pathlist = sorted(Path('data/Apr3/CIT6Apr3/').glob('*.txt'))
 cit_spec = pd.DataFrame()
@@ -64,8 +66,6 @@ for path in pathlist:
 cit_spec = cit_spec.sort_values(by='freq')
 ```
 
-
-## Data Processing
 
 ## Peak Detection and Classification
 
