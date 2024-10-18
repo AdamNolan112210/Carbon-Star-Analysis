@@ -20,6 +20,7 @@ This project offers a wide array of tools for visualizing and analysis spectrosc
 - Gaussian Fitting
 - Dual-Dataset Comparison
 
+
 ### Installation 
 
 ```python 
@@ -29,3 +30,18 @@ import matplotlib as mpl
 import astropy as asp
 
 ```
+
+
+## Usage
+
+## Data Processing
+
+## Peak Detection and Classification
+
+## Smoothing and Gaussian Fitting
+
+## Visualization
+
+## Contributing
+
+## License
