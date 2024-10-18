@@ -35,15 +35,14 @@ This project offers a range of tools for analyzing and visualizing radio spectro
 To use the code within this repository you will need to install the following libraries:
 
 ```python
-pip install numpy pandas matplotlib astropy scipy specutils
+!pip install numpy pandas matplotlib astropy scipy specutils
 ```
 
-```python 
-import numpy as np
-import pandas as pd
-import matplotlib as mpl
-import astropy as asp
-
+If you're running the code in Google Colab, you can mount Google Drive using:
+ ```python
+from google.colab import drive
+drive.mount('/content/drive/')
+%cd /content/drive/MyDrive
 ```
 
 
