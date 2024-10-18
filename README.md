@@ -72,7 +72,7 @@ Smoothing is applied to the Tant data using a Savitzky-Golay filter:
 ```python
 cit_spec['Tant_smoothed'] = savgol_filter(cit_spec['Tant'], window_length=11, polyorder=2)
 ```
-![Spectral Plot](images/spectral_plot.png)
+![Smoothed Data](images/SmoothedCIT6.png)
 
 The smoothed data is then used for peak detection and Gaussian fitting:
 ```python
