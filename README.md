@@ -99,12 +99,13 @@ Molecular classification is performed by finding the closest rest frequency in t
 molecule_row = molecule_data.iloc[(molecule_data['Rest Frequency'] - peak_freq).abs().argmin()]
 molecule_name = molecule_row['Molecule']
 ```
-
+![Molecules](images/PlottedMolecules.png)
 
 Results are stored in a DataFrame for both CIT6 and CW Leonis
 ```python
 df_classified_peaks = process_files_to_dataframe('data/Apr3/CIT6Apr3/', height=0.05, distance=5, prominence=0.05)
 ```
+![Example DF](images/DF.png)
 
 
 ## Visualization
