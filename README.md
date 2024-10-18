@@ -105,7 +105,7 @@ Results are stored in a DataFrame for both CIT6 and CW Leonis
 ```python
 df_classified_peaks = process_files_to_dataframe('data/Apr3/CIT6Apr3/', height=0.05, distance=5, prominence=0.05)
 ```
-![Example DF](images/DF.png)
+<img src="images/DF.png" alt="description" width="400"/>
 
 
 ## Visualization
