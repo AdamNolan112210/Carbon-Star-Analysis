@@ -15,7 +15,7 @@ Radio Spectroscopical analysis of Carbon Stars [CIT6](https://en.wikipedia.org/w
 
 ## Features
 
-This project offers a range of tools for analyzing and visualizing radio spectroscopic data, with the following features:
+This project offers a range of tools for analyzing and visualizing radio spectroscopic data of stellar bodies, with the following features:
 
 - **Peak Detection and Classification**: Automatically detects peaks in the spectroscopic data and classifies them by matching the detected peaks with known molecular transitions.
 
