@@ -25,9 +25,9 @@ This project offers a range of tools for analyzing and visualizing radio spectro
 
 - **Dual-Dataset Comparisons**: Provides tools to compare and visualize spectral data from both CIT6 and IRC+10216, plotting the data side by side for easy comparison.
 
-- **Annotation and Visualization**: Annotates detected peaks with molecular names in the plots, making it easy to identify the molecules responsible for each spectral line. Both the original and smoothed data can be plotted for CIT6 and IRC+10216.
+- **Annotation and Visualization**: Annotates detected peaks with molecular names in the plots, making it easy to identify the molecules responsible for each spectral line. Both the original and smoothed data can be plotted for CIT6 and CW Leonis.
 
-- **Data Handling and Export**: Processes multiple spectroscopic data files and outputs the results in easy-to-read `pandas` DataFrames, including peak frequencies, associated molecules, and integrated intensities (Tint).
+- **Data Handling and Export**: Processes multiple spectroscopic data files and outputs the results in `pandas` DataFrames, including peak frequencies, associated molecules, and integrated intensities (Tint).
 
 
 ### Installation 
@@ -74,15 +74,18 @@ The code detects peaks in intensity data and classifies them by matching detecte
 peaks, _ = find_peaks(ind_spec['Tant'], height=0.05, distance=5, prominence=0.05)
 peak_freqs = ind_spec['freq'].iloc[peaks].values
 ```
+
 Molecular classification is performed by finding the closest rest frequency in the dataset
 ```python
 molecule_row = molecule_data.iloc[(molecule_data['Rest Frequency'] - peak_freq).abs().argmin()]
 molecule_name = molecule_row['Molecule']
 ```
+
 Results are stored in a DataFrame for both CIT6 and CW Leonis
 ```python
 df_classified_peaks = process_files_to_dataframe('data/Apr3/CIT6Apr3/', height=0.05, distance=5, prominence=0.05)
 ```
+
 ## Smoothing and Gaussian Fitting
 
 Smoothing is applied to the Tant data using a Savitzky-Golay filter:
@@ -94,7 +97,27 @@ The smoothed data is then used for peak detection and Gaussian fitting:
 ```python
 fitted_cit_gaussian = fit_gaussian_for_section(np.array(freq_list), np.array(Tant_cit_list))
 ```
+
+The measure_Tint_with_gaussian_fit function fits a Gaussian model to the CIT6 data and overlays the results onto the original spectrum:
+```python
+measure_Tint_with_gaussian_fit(rest_freq, mol, cit_spec, irc_spec)
+```
+
 ## Visualization
+
+The project also includes multiple visualization tools for plotting annotated spectra for both CIT6 and CW Leonis. The plots include labeled peaks and molecular transitions, with different color coding for distinct data sections.
+
+Example of plotting annotated peaks:
+```python
+plt.scatter(peak_freqs_cit, peak_tants_cit, color='red', marker='o', label='Detected Peaks')
+plt.text(freq + 0.01, label_y_position, molecule, rotation=45, fontsize=14, color='blue')
+```
+
+Both original and smoothed data are plotted, allowing comparison:
+```python
+plt.plot(cit_spec['freq'], cit_spec['Tant'], label="CIT Original Data", color='blue')
+plt.plot(cit_spec['freq'], cit_spec['Tant_smoothed'], label="CIT Smoothed Data", color='green')
+```
 
 ## Contributing
 
