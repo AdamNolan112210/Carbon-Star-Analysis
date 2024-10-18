@@ -1,7 +1,7 @@
 # Carbon-Star-Analysis
 Radio Spectroscopical analysis of Carbon Stars CIT6 and IRC 
 
-# Important packages 
+# Essential packages 
 
 ```python 
 START
@@ -9,7 +9,7 @@ START
 import numpy as np
 import pandas as pd
 import matplotlib as mpl
-import astropy
+import astropy as asp
 
 END
 ```
