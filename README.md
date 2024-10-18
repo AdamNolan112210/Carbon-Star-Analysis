@@ -1,5 +1,6 @@
 # Carbon-Star-Analysis
-Radio Spectroscopical analysis of Carbon Stars CIT6 and IRC 
+Radio Spectroscopical analysis of Carbon Stars [CIT6](https://en.wikipedia.org/wiki/CIT_6)
+-  and [CW Leonis](https://en.wikipedia.org/wiki/CW_Leonis) 
 
 # Table of Contents
 - [Installation](#installation)
