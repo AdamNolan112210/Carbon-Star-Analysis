@@ -56,7 +56,7 @@ molecule_data['Rest Frequency'] = molecule_data['Rest Frequency'].astype(float) 
 
 ## Data Processing
 
-The spectral data is loaded using pandas.read_csv and concatenated for further analysis:
+The spectral data is loaded using pd.read_csv and concatenated for further analysis:
 ```python
 pathlist = sorted(Path('data/Apr3/CIT6Apr3/').glob('*.txt'))
 cit_spec = pd.DataFrame()
