@@ -100,6 +100,7 @@ molecule_row = molecule_data.iloc[(molecule_data['Rest Frequency'] - peak_freq).
 molecule_name = molecule_row['Molecule']
 ```
 
+
 Results are stored in a DataFrame for both CIT6 and CW Leonis
 ```python
 df_classified_peaks = process_files_to_dataframe('data/Apr3/CIT6Apr3/', height=0.05, distance=5, prominence=0.05)
