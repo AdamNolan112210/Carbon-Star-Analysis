@@ -6,8 +6,8 @@ Radio Spectroscopical analysis of Carbon Stars [CIT6](https://en.wikipedia.org/w
 - [Installation](#installation)
 - [Usage](#usage)
 - [Data Processing](#data-processing)
-- [Peak Detection and Classification](#peak-detection-and-classification)
 - [Smoothing and Gaussian Fitting](#smoothing-and-gaussian-fitting)
+- [Peak Detection and Classification](#peak-detection-and-classification)
 - [Visualization](#visualization)
 - [Contributing](#contributing)
 - [License](#license)
@@ -66,6 +66,22 @@ for path in pathlist:
 cit_spec = cit_spec.sort_values(by='freq')
 ```
 
+## Smoothing and Gaussian Fitting
+
+Smoothing is applied to the Tant data using a Savitzky-Golay filter:
+```python
+cit_spec['Tant_smoothed'] = savgol_filter(cit_spec['Tant'], window_length=11, polyorder=2)
+```
+
+The smoothed data is then used for peak detection and Gaussian fitting:
+```python
+fitted_cit_gaussian = fit_gaussian_for_section(np.array(freq_list), np.array(Tant_cit_list))
+```
+
+The measure_Tint_with_gaussian_fit function fits a Gaussian model to the CIT6 data and overlays the results onto the original spectrum:
+```python
+measure_Tint_with_gaussian_fit(rest_freq, mol, cit_spec, irc_spec)
+```
 
 ## Peak Detection and Classification
 
@@ -86,22 +102,6 @@ Results are stored in a DataFrame for both CIT6 and CW Leonis
 df_classified_peaks = process_files_to_dataframe('data/Apr3/CIT6Apr3/', height=0.05, distance=5, prominence=0.05)
 ```
 
-## Smoothing and Gaussian Fitting
-
-Smoothing is applied to the Tant data using a Savitzky-Golay filter:
-```python
-cit_spec['Tant_smoothed'] = savgol_filter(cit_spec['Tant'], window_length=11, polyorder=2)
-```
-
-The smoothed data is then used for peak detection and Gaussian fitting:
-```python
-fitted_cit_gaussian = fit_gaussian_for_section(np.array(freq_list), np.array(Tant_cit_list))
-```
-
-The measure_Tint_with_gaussian_fit function fits a Gaussian model to the CIT6 data and overlays the results onto the original spectrum:
-```python
-measure_Tint_with_gaussian_fit(rest_freq, mol, cit_spec, irc_spec)
-```
 
 ## Visualization
 
