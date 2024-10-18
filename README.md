@@ -1,7 +1,7 @@
 # Carbon-Star-Analysis
 Radio Spectroscopical analysis of Carbon Stars [CIT6](https://en.wikipedia.org/wiki/CIT_6) and [CW Leonis](https://en.wikipedia.org/wiki/CW_Leonis) 
 
-# Table of Contents
+## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Data Processing](#data-processing)
@@ -13,12 +13,14 @@ Radio Spectroscopical analysis of Carbon Stars [CIT6](https://en.wikipedia.org/w
 
 
 
-# Features
-- Detailed visual analysis of the 'eQ' frequency band (30 GHz to 50GHz) emitted by [CW Leonis](https://en.wikipedia.org/wiki/CW_Leonis) & [CIT6](https://en.wikipedia.org/wiki/CIT_6)
-- 
+## Features
+This project offers a wide array of tools for visualizing and analysis spectroscopical data with the following features:
+- Peak-Classification and Detection
+- Smoothing Spectral data (via Savitzky-Golay)
+- Gaussian Fitting
+- Dual-Dataset Comparison
 
-
-## Installation 
+### Installation 
 
 ```python 
 import numpy as np
