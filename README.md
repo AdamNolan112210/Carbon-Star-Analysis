@@ -112,4 +112,3 @@ df_classified_peaks = process_files_to_dataframe('data/Apr3/CIT6Apr3/', height=0
 ```
 <img src="images/DF.png" alt="description" width="400"/>
 
-## Contributing
