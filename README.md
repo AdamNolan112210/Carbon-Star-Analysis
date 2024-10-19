@@ -17,7 +17,7 @@ Radio Spectroscopical analysis of Carbon Stars [CIT6](https://en.wikipedia.org/w
 
 This project offers a range of tools for analyzing and visualizing radio spectroscopic data of stellar bodies, with the following features:
 
-- <p>Peak Detection and Classification:</p>Automatically detects peaks in the spectroscopic data and classifies them by matching the detected peaks with known molecular transitions.
+- <p><u>Peak Detection and Classification:</u></p> Automatically detects peaks in the spectroscopic data and classifies them by matching the detected peaks with known molecular transitions.
 
 - Smoothing Spectral Data: Applies a Savitzky-Golay filter to smooth the Tant (antenna temperature measured in K) data for both CIT6 and CW Leonis, helping to reduce noise and improve clarity in peak detection.
 
