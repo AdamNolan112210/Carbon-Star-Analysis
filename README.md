@@ -93,7 +93,7 @@ measure_Tint_with_gaussian_fit(rest_freq, mol, cit_spec, irc_spec)
 
 ## Peak Detection and Classification
 
-The code detects peaks in intensity data and classifies them by matching detected peaks to known molecular rest frequencies:
+The code detects peaks in intensity and classifies them by matching detected peaks to known molecular rest frequencies:
 ```python
 peaks, _ = find_peaks(ind_spec['Tant'], height=0.05, distance=5, prominence=0.05)
 peak_freqs = ind_spec['freq'].iloc[peaks].values
