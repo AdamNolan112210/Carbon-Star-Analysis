@@ -45,7 +45,6 @@ drive.mount('/content/drive/')
 %cd /content/drive/MyDrive
 ```
 
-
 ## Usage
 
 Load the spectral line data for both CIT6 and CW Leonis:
