@@ -17,17 +17,17 @@ Radio Spectroscopical analysis of Carbon Stars [CIT6](https://en.wikipedia.org/w
 
 This project offers a range of tools for analyzing and visualizing radio spectroscopic data of stellar bodies, with the following features:
 
-- <p>**Peak Detection and Classification:**</p> Automatically detects peaks in the spectroscopic data and classifies them by matching the detected peaks with known molecular transitions.
+- **Peak Detection and Classification:** Automatically detects peaks in the spectroscopic data and classifies them by matching the detected peaks with known molecular transitions.
 
-- Smoothing Spectral Data: Applies a Savitzky-Golay filter to smooth the Tant (antenna temperature measured in K) data for both CIT6 and CW Leonis, helping to reduce noise and improve clarity in peak detection.
+- **Smoothing Spectral Data:** Applies a Savitzky-Golay filter to smooth the Tant (antenna temperature measured in K) data for both CIT6 and CW Leonis, helping to reduce noise and improve clarity in peak detection.
 
-- Gaussian Fitting: Fits a Gaussian model to zoomed-in sections of CIT6 spectral data, allowing precise modeling of spectral lines and better visualization of the line profiles.
+- **Gaussian Fitting:** Fits a Gaussian model to zoomed-in sections of CIT6 spectral data, allowing precise modeling of spectral lines and better visualization of the line profiles.
 
-- Dual-Dataset Comparisons: Provides tools to compare and visualize spectral data from both CIT6 and CW Leonis, plotting the data side by side for easy comparison.
+- **Dual-Dataset Comparisons:** Provides tools to compare and visualize spectral data from both CIT6 and CW Leonis, plotting the data side by side for easy comparison.
 
-- Annotation and Visualization: Annotates detected peaks with molecular names in the plots, making it easy to identify the molecules responsible for each spectral line. Both the original and smoothed data can be plotted for CIT6 and CW Leonis.
+- **Annotation and Visualization:** Annotates detected peaks with molecular names in the plots, making it easy to identify the molecules responsible for each spectral line. Both the original and smoothed data can be plotted for CIT6 and CW Leonis.
 
-- Data Handling and Export: Processes multiple spectroscopic data files and outputs the results in `pandas` DataFrames, including peak frequencies, associated molecules, and integrated intensities (Tint).
+- **Data Handling and Export:** Processes multiple spectroscopic data files and outputs the results in `pandas` DataFrames, including peak frequencies, associated molecules, and integrated intensities (Tint).
 
 
 ### Installation 
