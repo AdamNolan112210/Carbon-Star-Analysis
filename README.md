@@ -83,7 +83,7 @@ The smoothed data is then used for peak detection and Gaussian fitting:
 ```python
 fitted_cit_gaussian = fit_gaussian_for_section(np.array(freq_list), np.array(Tant_cit_list))
 ```
-![Detected Peaks](images/DetectedPeaks.png)
+<img src="images/DetectedPeaks.png" alt="description" width="400"/>
 
 The measure_Tint_with_gaussian_fit function fits a Gaussian model to the CIT6 data and overlays the results onto the original spectrum:
 ```python
